@@ -150,3 +150,155 @@ function generatePDF(title){
    doc.save('Test.pdf');
    
 }
+
+
+  function logIn(){
+    fetch('http://158.69.220.186:8079/auth/signin',
+  {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+      method: "POST",
+      body: {
+        "username": "pagcarta",
+        "password": "8dMI696V252k1eb"
+        }
+  })
+  .then(function(res){ console.log(res)})
+  .catch(function(res){ console.log(res) })
+  }
+
+  
+
+// function logIn(){
+//   let h = new Headers();
+//   h.append('Content-Type','application/json');
+//   h.append('Access-Control-Allow-Origin','*');
+
+//   let req = new Request('http://158.69.220.186:8079/auth/signin', {
+//     method: 'POST',
+//     headers: h, 
+//     mode: 'cors'
+//   })
+
+//   fetch(req)
+//   .then((response) => {
+//     if(response.ok){
+//       return response.json();
+//     }else{
+//       throw new Error('Bad http');
+//     }
+//   }).then((jsonData) => {
+//     console.log(jsonData);
+//   }).catch((err) => {
+//     console.log('error', err.message);
+//   });
+// }
+
+
+  
+  // const url = 'http://158.69.220.186:8079/auth/signin';
+
+// function logIn(){
+//   return new Promise( function(resolve, reject){
+//     fetch(url,
+//       {
+//           headers: {
+//             'Content-Type': 'application/json',
+//             'Access-Control-Allow-Origin': "*",
+//             'Accept': 'application/json',
+//           },
+//           method: "POST",
+//           body: {
+//             "username": "pagcarta",
+//             "password": "8dMI696V252k1eb"
+//             }
+//       })
+//       .then(function(res){ console.log(res)})
+//       .catch(function(res){ console.log(res)})
+//       }      
+          
+//   );
+// }
+
+
+// function logIn(){
+//   let headers = new Headers();
+//   headers.append('Content-Type', 'application/json');
+//   headers.append('Access-Control-Allow-Origin', '*');
+
+//   let req = new Request('http://158.69.220.186:8079/auth/signin', {
+//     method: 'POST',
+//     headers: headers,
+//     body: {
+//       "username": "pagcarta",
+//       "password": "8dMI696V252k1eb"
+//       }
+      
+//   })
+
+//   fetch(req)
+//   .then((response) => {
+//    if (response.ok){
+//     return response.json();
+//    } else {
+//      throw new Error();
+//    }
+//   })  
+
+// }
+
+// 'Authorization': 'Bearer ' + this.state.clientToken,
+
+// function logIn(){
+//     fetch('http://158.69.220.186:8079/auth/signin', {
+//       headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       },
+//     method: 'POST',
+//     body: {
+//       "username": "pagcarta",
+//       "password": "8dMI696V252k1eb"
+//       } 
+//   }).then(()=>{
+//     if(response.ok){
+//       return response.text()
+//     }else{
+//       throw "Error";
+//     }
+//   }).then((texto)=>{
+//     console.log(texto);
+//   }).catch((err)=>{
+//     console.log(err);
+//   });
+// };
+
+// function logIn(){
+
+//   (async () => {
+//     const responseBody = await fetch('http://158.69.220.186:8079/auth/signin', {
+//       method: 'POST',
+//       mode: "no-cors",
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+      
+//       body: JSON.stringify({
+//         "username": "pagcarta",
+//         "password": "8dMI696V252k1eb"
+//       })
+//     });
+//     const content = await rawResponse.json();
+  
+//     console.log(content);
+//   });
+// }
+
+
+// body: JSON.stringify({a: 1, b: 'Textual content'})
+
+  
+  // var jsonData = JSON.parse(pwd);
+  // pm.globals.set("Bearer-Token", "Bearer " + jsonData.token);
