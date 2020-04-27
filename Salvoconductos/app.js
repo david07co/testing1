@@ -152,22 +152,6 @@ function generatePDF(title){
 }
 
 
-  function logIn(){
-    fetch('http://158.69.220.186:8079/auth/signin',
-  {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-      method: "POST",
-      body: {
-        "username": "pagcarta",
-        "password": "8dMI696V252k1eb"
-        }
-  })
-  .then(function(res){ console.log(res)})
-  .catch(function(res){ console.log(res) })
-  };
 
   
 
